@@ -286,6 +286,8 @@ a:hover {
   display: flex;
   align-items: center;
   margin-top: 26px;
+  margin-left: auto;
+  width: 582px;
 }
 
 .dots__item {
@@ -295,6 +297,11 @@ a:hover {
   background: rgba(51, 51, 51, 0.42);
   margin-right: 10px;
   cursor: pointer;
+}
+
+.dots__item.active,
+.dots__item:hover {
+  background: #333333;
 }
 
 .guide__wrapper {
