@@ -1,3 +1,11 @@
+const burger = document.querySelector('.header__burger');
+const burgerContent = document.querySelector('.header__burger-ul');
+
+burger.addEventListener('click', function() {
+    burger.classList.toggle('active');
+    burgerContent.classList.toggle('active');
+});
+
 function testWebP(callback) {
 
     var webP = new Image();
