@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
     <title>Gamify | Main</title>
 </head>
 <body>
@@ -13,6 +14,7 @@
         <div class="container">
             <div class="main__block">
                 <div class="main__block-prew" onclick="minusSlide()"></div>
+                
                 <div class="slider-item">
                     <div class="main__block-left">
                         <h1 class="main__block-left-title">
@@ -58,7 +60,10 @@
                 
              <div class="main__block-next" onclick="plusSlide()"></div>
              
+             
             </div>
+            <div class="main__block-prew main__block-prew-mobile" onclick="minusSlide()"></div>
+            <div class="main__block-next main__block-next-mobile" onclick="plusSlide()"></div>
             <div class="dots">
                 <div class="dots__item" onclick="currentSlide(1)"></div>
                 <div class="dots__item" onclick="currentSlide(2)"></div>
@@ -164,15 +169,36 @@
                     
                 </div>
             </div>
+
             <div class="newp__wrapper">
-                <div class="newp__wrapper-left">
+                <input type="radio" name="tab" id="tab1" value="tab1">
+                <input type="radio" name="tab" id="tab2" value="tab2">
+                <div class="newp__wrapper-tab4ik tabs">
+                    <label for="tab1">
+                    <div class="newp__wrapper-tab4ik-item tab plus">
+                        <h5 class="newp__wrapper-tab4ik-item-title">
+                            News
+                        </h5>
+                    </div>
+                    </label>
+                    <label for="tab2">
+                    <div class="newp__wrapper-tab4ik-item tab">
+                        <h5 class="newp__wrapper-tab4ik-item-title">
+                            Popular
+                        </h5>
+                    </div>
+                    </label>
+                </div>
+                <div class="newp__wrapper-left ">
                     <div class="newp__wrapper-heading">
                         <h4 class="newp__wrapper-heading-title">
                             News
                         </h4>
                     </div>
+                    <div class="content">
                     <div class="newp__wrapper-left-post">
                         <a href="#" class="newp__wrapper-left-link">
+                            <img src="/img/newp-game.png" alt="knife" class="newp__wrapper-mobile">
                             <div class="newp__wrapper-left-alltext">
                                 <h5 class="newp__wrapper-left-link-title">
                                  Age of Empires 4 releasing this fall
@@ -198,6 +224,7 @@
                     </div>
                     <div class="newp__wrapper-left-post">
                         <a href="#" class="newp__wrapper-left-link">
+                            <img src="/img/newp-soft.png" alt="keyboard" class="newp__wrapper-mobile">
                             <div class="newp__wrapper-left-alltext">
                                 <h5 class="newp__wrapper-left-link-title">
                                     Windows 11 release date announced
@@ -223,6 +250,7 @@
                     </div>
                     <div class="newp__wrapper-left-post">
                         <a href="#" class="newp__wrapper-left-link">
+                            <img src="/img/newp-game2.png" alt="lava" class="newp__wrapper-mobile">
                             <div class="newp__wrapper-left-alltext">
                                 <h5 class="newp__wrapper-left-link-title">
                                     Developers of Elder Scrolls are working on new game
@@ -250,12 +278,16 @@
                         More News
                     </a>
                 </div>
+                </div>
+                <div class="content">
                 @@include('_popular.html')
+                </div>
             </div> 
-            <div class="review__wrapper">
-                <div class="review__wrapper-prew"></div>
-                <div class="review__wrapper-content">
-                    <a href="#" class="review__wrapper-content-link">
+            <div class="review__wrapper-prew "></div>
+            <div class="review__wrapper-next"></div>
+            <div class="review__wrapper swiper">
+                <div class="review__wrapper-content swiper-wrapper">
+                    <a href="#"  class="review__wrapper-content-link swiper-slide">
                         <div class="review__wrapper-content-link-img review__wrapper-content-link-img_f">
                             <span class="review__wrapper-content-link-img-number">
                                 95
@@ -270,7 +302,7 @@
                             </div>
                         </div>
                     </a>
-                    <a href="#" class="review__wrapper-content-link">
+                    <a href="#" class="review__wrapper-content-link swiper-slide">
                         <div class="review__wrapper-content-link-img review__wrapper-content-link-img_s">
                             <span class="review__wrapper-content-link-img-number">
                                 90
@@ -285,7 +317,7 @@
                             </div>
                         </div>
                     </a>
-                    <a href="#" class="review__wrapper-content-link">
+                    <a href="#"  class="review__wrapper-content-link swiper-slide">
                         <div class="review__wrapper-content-link-img review__wrapper-content-link-img_t">
                             <span class="review__wrapper-content-link-img-number">
                                80
@@ -300,21 +332,44 @@
                             </div>
                         </div>
                     </a>
-                <div class="review__wrapper-next"></div>
                 </div>
+                
                 <a href="#" class="btn review__wrapper-btn">
                     More Reviews
                 </a>
+                
             </div>
+            
+            
             <div class="guidp__wrapper">
+                <input type="radio" name="tab" id="tab3" value="tab3">
+                <input type="radio" name="tab" id="tab4" value="tab4">
+                <div class="guidp__wrapper-tab4ik tabs">
+                    <label for="tab3">
+                        <div class="guidp__wrapper-tab4ik-item tab sponuka">
+                            <h5 class="guidp__wrapper-tab4ik-item-title">
+                                Guides
+                            </h5>
+                        </div>
+                    </label>
+                    <label for="tab4">
+                        <div class="guidp__wrapper-tab4ik-item tab">
+                            <h5 class="guidp__wrapper-tab4ik-item-title">
+                                Popular
+                            </h5>
+                        </div>
+                    </label>
+                </div>
                 <div class="guidp__wrapper-left">
                     <div class="guidp__wrapper-heading">
                         <h4 class="guidp__wrapper-heading-title">
                             Guides
                         </h4>
                     </div>
+                    <div class="content1">
                     <div class="guidp__wrapper-left-post">
                         <a href="#" class="guidp__wrapper-left-link">
+                            <img src="/img/guidp-f.png" alt="computer" class="guidp__wrapper-mobile">
                             <div class="guidp__wrapper-left-alltext">
                                 <h5 class="guidp__wrapper-left-link-title">
                                     Retro gaming guide
@@ -340,6 +395,7 @@
                     </div>
                     <div class="guidp__wrapper-left-post">
                         <a href="#" class="guidp__wrapper-left-link">
+                            <img src="/img/guidp-s.png" alt="computer" class="guidp__wrapper-mobile">
                             <div class="guidp__wrapper-left-alltext">
                                 <h5 class="guidp__wrapper-left-link-title">
                                     How to clean your PC
@@ -365,6 +421,7 @@
                     </div>
                     <div class="guidp__wrapper-left-post">
                         <a href="#" class="guidp__wrapper-left-link">
+                            <img src="/img/guidp-t.png" alt="nintendo" class="guidp__wrapper-mobile">
                             <div class="guidp__wrapper-left-alltext">
                                 <h5 class="guidp__wrapper-left-link-title">
                                     Hades: full game walkthrough
@@ -391,12 +448,16 @@
                     <a href="#" class="btn guidp__wrapper-btn">
                         More Guides
                     </a>
+                </div>  
                 </div>
+                <div class="content1">
                 @@include('_popular.html')
+            </div>
             </div>
         </div>
     </main>
     @@include('_footer.html')
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <script src="js/script.min.js"></script>
 </body>
 </html>
