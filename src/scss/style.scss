@@ -1113,7 +1113,17 @@ a:hover{
     }
   }
 }
-
+@media (max-width: 1064px) and (min-width: 770px){
+  .review__wrapper{
+    &-content{
+      &-link{
+        &-img{
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+}
 @media screen and (max-width: 991px){
   .header {
     &__logo {
@@ -1509,8 +1519,9 @@ a:hover{
     &-next{
       &-mobile{
         display: block !important;
-        right: -267px;
-        top: -168px;
+        right: 0px;
+        top: 203px;
+        position: absolute;
       }
     }
   }
@@ -1600,6 +1611,7 @@ a:hover{
     }
   }
   .newp__wrapper{
+    padding-top: 10px;
     &-left{
       &-link{
         &-title{
@@ -1615,8 +1627,6 @@ a:hover{
       }
       &-links{
         justify-content: space-between;
-        border-bottom: solid 1px #E5E5E5;
-        padding-bottom: 15px;
         &-item{
           font-size: 12px;
         }
@@ -1673,7 +1683,7 @@ a:hover{
     &-content{
       &-link{
         &-img{
-          width: auto;
+          
         }
       }
     }
@@ -1683,6 +1693,7 @@ a:hover{
   .popular__link{
     &-number{
       font-size: 40px;
+      width: 44px;
     }
     &-texts{
       &-title{
@@ -1697,11 +1708,65 @@ a:hover{
       }
     }
   }
-  
+  .guidp__wrapper{
+    &-mobile{
+      width: 100%;
+    }
+    &-left{
+      &-link{
+        &-title{
+          font-size: 22px;
+          width: 100%;
+          text-align: initial;
+        }
+        &-date{
+          font-size: 12px;
+          text-align: initial;
+          padding-bottom: 15px;
+        }
+      }
+      &-text{
+        font-size: 14px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        text-align-last: left;
+        width: 100%;
+      }
+      &-links{
+        justify-content: space-between;
+        &-item{
+          font-size: 12px;
+        }
+      }
+    }
+  }
+  .swiper{
+    height: 1100px;
+  }
+}
+@media screen and (max-width: 450px) and (min-width:344px){
+  .main__block{
+    &-prew{
+      &-mobile{
+        top: -122px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 366px){
+.review__wrapper{
+  &-content{
+    &-link{
+      &-img{
+        width: auto;
+      }
+    }
+  }
+}
 }
 
 .swiper{
   padding-top: 45px;
-  height: 1100px;
 
 }

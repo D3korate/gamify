@@ -8,25 +8,32 @@ const swiper = new Swiper('.swiper', {
         1140:{
             slidesPerView: 3, 
         },
+        1065:{
+            slidesPerView: 3, 
+        },
         771:{
             slidesPerView: 2,
-            spaceBetween: 250,
+            spaceBetween: 1,
         },
         720:{
             slidesPerView: 2,
-            spaceBetween: 30,
+            spaceBetween: 50,
         },
         650:{
-            slidesPerView: 2,
-            spaceBetween: 50,
+            slidesPerView: 1,
+            
         },
         649:{
             slidesPerView: 1,
-            direction: 'vertical',
+            
         },
-        450:{
-            direction: 'vertical',
+        451:{
             slidesPerView: 1,
+        },
+        320:{
+            slidesPerView: 3,
+            direction: 'vertical',
+            spaceBetween: 20,
         }
 
         
