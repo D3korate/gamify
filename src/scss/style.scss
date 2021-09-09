@@ -861,6 +861,9 @@ a:hover{
       &-img {
         width: 155px;
         height: 178px;
+        &_mobile{
+          display: none;
+        }
       }
       &-wrapper_numbers {
         display: flex;
@@ -875,6 +878,18 @@ a:hover{
         margin-bottom: auto;
         position: relative;
         bottom: 28px;
+        &_mobile{
+          display: none;
+          font-weight: 700;
+        color: #fff;
+        background: #800080;
+        padding: 6px 9px;
+        border-radius: 5px;
+        font-size: 25px;
+        margin-bottom: auto;
+        position: relative;
+        bottom: 28px;
+        }
       }
       &-last {
         border-bottom: none;
@@ -1269,6 +1284,30 @@ a:hover{
       margin-bottom: 40px;
     }
   
+  }
+
+  .ratings{
+    display: block;
+    &__wrapper{
+      &-heading{
+        width: auto;
+      }
+      &-item{
+        width: 100%;
+        &-texts{
+          width: 100%;
+          
+        }
+        &-text{
+          width: auto; 
+          margin: 0;
+          margin-bottom: 10px;
+        }
+        &-number{
+          margin: auto;
+        }
+      }
+    }
   }
   
 }
@@ -1729,6 +1768,8 @@ a:hover{
       font-size: 14px;
       width: auto;
     }
+
+  
   }
   
   #tab1, #tab2{
@@ -1806,6 +1847,52 @@ a:hover{
   }
   .swiper{
     height: 1100px;
+  }
+
+  .ratings{
+    &__wrapper{
+      &-sort{
+        display: block;
+        &-w{
+          display: flex;
+          margin-top: 15px;
+        }
+        &-title{
+          &_secondi{
+            width: 71%;
+            margin: 0 auto;
+          }
+        }
+      }
+      &-item{
+        display: block;
+        &-img{
+          display: none;
+          &_mobile{
+            display: block;
+            background: url('/img/ratings-mobile.png') center center no-repeat;
+            width: auto;
+            height: 226px;
+            padding-top: 166px;
+            padding-left: 15px;
+            background-size: cover;
+          }
+        }
+        &-number{
+          display: none;
+          &_mobile{
+            display: block;
+            width: 45px;
+            height: 45px;
+            position: unset;
+          }
+        }
+        &-texts{
+          margin: 0;
+          margin-top: 15px;
+        }
+      }
+    }
   }
 }
 @media screen and (max-width: 450px) and (min-width:344px){

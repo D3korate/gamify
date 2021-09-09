@@ -965,6 +965,10 @@ a:hover {
   height: 178px;
 }
 
+.ratings__wrapper-item-img_mobile {
+  display: none;
+}
+
 .ratings__wrapper-item-wrapper_numbers {
   display: flex;
 }
@@ -974,6 +978,19 @@ a:hover {
   color: #fff;
   background: #800080;
   padding: 8px 11px;
+  border-radius: 5px;
+  font-size: 25px;
+  margin-bottom: auto;
+  position: relative;
+  bottom: 28px;
+}
+
+.ratings__wrapper-item-number_mobile {
+  display: none;
+  font-weight: 700;
+  color: #fff;
+  background: #800080;
+  padding: 6px 9px;
   border-radius: 5px;
   font-size: 25px;
   margin-bottom: auto;
@@ -1382,6 +1399,32 @@ a:hover {
   .guidp__wrapper-btn {
     margin: 0 auto;
     margin-bottom: 40px;
+  }
+
+  .ratings {
+    display: block;
+  }
+
+  .ratings__wrapper-heading {
+    width: auto;
+  }
+
+  .ratings__wrapper-item {
+    width: 100%;
+  }
+
+  .ratings__wrapper-item-texts {
+    width: 100%;
+  }
+
+  .ratings__wrapper-item-text {
+    width: auto;
+    margin: 0;
+    margin-bottom: 10px;
+  }
+
+  .ratings__wrapper-item-number {
+    margin: auto;
   }
 }
 
@@ -1914,6 +1957,54 @@ a:hover {
   .swiper {
     height: 1100px;
   }
+
+  .ratings__wrapper-sort {
+    display: block;
+  }
+
+  .ratings__wrapper-sort-w {
+    display: flex;
+    margin-top: 15px;
+  }
+
+  .ratings__wrapper-sort-title_secondi {
+    width: 71%;
+    margin: 0 auto;
+  }
+
+  .ratings__wrapper-item {
+    display: block;
+  }
+
+  .ratings__wrapper-item-img {
+    display: none;
+  }
+
+  .ratings__wrapper-item-img_mobile {
+    display: block;
+    background: url("/img/ratings-mobile.png") center center no-repeat;
+    width: auto;
+    height: 226px;
+    padding-top: 166px;
+    padding-left: 15px;
+    background-size: cover;
+  }
+
+  .ratings__wrapper-item-number {
+    display: none;
+  }
+
+  .ratings__wrapper-item-number_mobile {
+    display: block;
+    width: 45px;
+    height: 45px;
+    position: unset;
+  }
+
+  .ratings__wrapper-item-texts {
+    margin: 0;
+    margin-top: 15px;
+  }
 }
 
 @media screen and (max-width: 366px) {
@@ -1973,4 +2064,9 @@ a:hover {
 @media screen and (max-width: 450px) {
 
   .webp .guide__wrapper-right-img_t { background-image: url(/img/guide-guide-mobile.webp) !important; }
+}
+
+@media screen and (max-width: 450px) {
+
+  .webp .ratings__wrapper-item-img_mobile { background: url(/img/ratings-mobile.webp) center center no-repeat; }
 }
