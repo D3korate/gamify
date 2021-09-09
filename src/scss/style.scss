@@ -1079,8 +1079,16 @@ a:hover{
     }
     &-left{
       &-link{
+        &_tablet{
+          margin-left: 20px;
+        }
         &-title{
           width: 258px;
+        }
+        &-date{
+          &_tablet{
+            padding-bottom: 19px;
+          }
         }
       }
       &-post{
@@ -1216,11 +1224,28 @@ a:hover{
     &-left{
       &-post{
         justify-content: center;
+        &_news{
+          justify-content: left;
+        }
+      }
+      &-link{
+        &-title{
+          &_tablet{
+            width: auto;
+          }
+        }
+      }
+      &-img{
+        &_tablet{
+          // width: 100%;
+          background-position: left;
+        }
       }
     }
     &-btn{
       margin: 0 auto;
       margin-bottom: 40px;
+      
     }
     &-right{
       padding-bottom: 40px;
@@ -1381,9 +1406,19 @@ a:hover{
           width: 75%;
           margin: 0 auto;
           text-align: center;
+          &_tablet{
+            width: 100%;
+            text-align: left;
+          }
         }
         &-date{
           text-align: center;
+          &_tablet{
+            text-align-last: left;
+            &_x{
+              text-align-last: left;
+            }
+          }
         }
       }
       &-alltext{
@@ -1391,6 +1426,9 @@ a:hover{
       }
       &-links{
         justify-content: space-evenly;
+        &_table{
+          justify-content: space-between;
+        }
       }
     }
     &-right{
@@ -1434,7 +1472,28 @@ a:hover{
     }
   }
 }
-
+@media screen and (max-width: 550px){
+  .newp__wrapper{
+    &-left{
+      &-img{
+        &_tablet{
+          margin: 0 auto;
+          align-items: center;
+          width: 100%;
+        }
+      }
+      &-post{
+        &-imgw{
+          width: auto;
+          
+        }
+        &_news{
+          display: block;
+        }
+      }
+    }
+  }
+}
 @media screen and (max-width: 450px) {
   .container {
     padding: 0 20px;
@@ -1613,6 +1672,11 @@ a:hover{
   .newp__wrapper{
     padding-top: 10px;
     &-left{
+      &-img{
+        &_tablet{
+          height: 201px;
+        }
+      }
       &-link{
         &-title{
           font-size: 22px;
