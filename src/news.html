@@ -9,6 +9,16 @@
 </head>
 <body>
     @@include('_header.html')
+    <script>const burger = document.querySelector('.header__burger');
+        const burgerContent = document.querySelector('.header__burger-ul');
+        
+        
+        
+        
+        burger.addEventListener('click', function() {
+            burger.classList.toggle('active');
+            burgerContent.classList.toggle('active');
+        });</script>
     <main class="main">
         <div class="container">
             <div class="newp__wrapper">
@@ -144,6 +154,5 @@
         </div>
     </main>
     @@include('_footer.html')
-<script src="js/script.min.js"></script>
 </body>
 </html>

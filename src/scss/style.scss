@@ -759,15 +759,15 @@ a:hover{
       border-bottom: none;
     }
       &-inside {
-        background: url("../img/review.svg") no-repeat;
+        background: url("../img/review.svg") center center no-repeat;
         width: 618px;
         height: 315px;
         padding: 265px 0 0 13px;
         &_second {
-          background: url("../img/review-2.svg") no-repeat;
+          background: url("../img/review-2.svg") center center no-repeat;
         }
         &_third {
-          background: url('../img/review-3.svg') no-repeat;
+          background: url('../img/review-3.svg') center center no-repeat;
         }
     }
     &-number {
@@ -1252,7 +1252,7 @@ a:hover{
       }
       &-img{
         &_tablet{
-          // width: 100%;
+          
           background-position: left;
         }
       }
@@ -1309,6 +1309,21 @@ a:hover{
       }
     }
   }
+
+  .reviews{
+    display: block;
+    &__wrapper{
+      &-item{
+        &-inside{
+          margin: 0 auto;
+          
+        }
+      }
+      &-heading{
+        width: auto;
+      }
+    }
+  }
   
 }
 
@@ -1348,6 +1363,37 @@ a:hover{
       &-link{
         &-img{
           margin: 0 auto;
+        }
+      }
+    }
+    .reviews{
+      &__wrapper{
+        &-item{
+          &-inside{
+            background-size: cover;
+          }
+        }
+      }
+    }
+  }
+
+  .reviews{
+    &__wrapper{
+      &-item{
+        &-inside{
+          width: auto;
+          height: 201px;
+          padding: 153px 0 0 13px;
+          background-size: cover;
+        }
+        &-text{
+          font-size: 14px;
+        }
+        &-date{
+          font-size: 12px;
+        }
+        &-link{
+          font-size: 12px;
         }
       }
     }
@@ -1894,6 +1940,7 @@ a:hover{
       }
     }
   }
+  
 }
 @media screen and (max-width: 450px) and (min-width:344px){
   .main__block{
