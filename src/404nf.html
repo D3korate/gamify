@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>404 страница не найдена</title>
+</head>
+<body>
+    @@include('_header.html')
+    
+    <div class="container">
+        <div class="nav-bar">
+            <div class="nav-bar__wrapper">
+                <a href="#" class="nav-bar__wrapper-link active">
+                    Каталог товаров
+                </a>
+                <a href="#" class="nav-bar__wrapper-link">
+                     Контакты
+                </a>
+                <a href="#" class="nav-bar__wrapper-link">
+                     Возврат товара
+                </a>
+                <a href="#" class="nav-bar__wrapper-link ">
+                     Скидки
+                </a>
+            </div>
+            <div class="nav-bar__navigation">
+                <a href="#" class="nav-bar__navigation-link nav-bar__navigation-link_search"></a>
+                <a href="#" class="nav-bar__navigation-link nav-bar__navigation-link_privc"></a>
+                <a href="#" class="nav-bar__navigation-link nav-bar__navigation-link_basket"></a>
+            </div>
+        </div>  
+        <div class="notfound">
+            <h1 class="notfound__title">
+                Страница не найдена!
+            </h1>
+            <p class="notfound__text">Возможно, вы воспользовались недействительной ссылкой или страница была удалена.</p>
+            <a href="#" class="notfound__link">Вернуться на предыдущую страницу </a>
+        </div>
+        
+    </div>  
+    @@include('_footer.html')
+</body>
+</html>
