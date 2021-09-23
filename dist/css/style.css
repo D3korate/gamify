@@ -87,6 +87,15 @@ li {
   opacity: 1;
 }
 
+input {
+  padding: 15px 0 16px 15px;
+  font-size: 16px;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  border: 1px solid #111;
+  outline: none;
+}
+
 h1,
 h2,
 h3,
@@ -740,13 +749,6 @@ a:hover {
   margin-right: 30px;
 }
 
-.bascet-stage-two__content-newuser-item::placeholder {
-  padding: 15px 0 16px 15px;
-  font-size: 16px;
-  font-family: "Inter", sans-serif;
-  font-weight: 400;
-}
-
 .bascet-stage-two__content-newuser-agreement {
   display: flex;
   align-items: center;
@@ -783,13 +785,6 @@ a:hover {
   width: 316px;
   height: 50px;
   margin-bottom: 30px;
-}
-
-.bascet-stage-two__content-registr-wrapper-item::placeholder {
-  padding: 15px 0 16px 15px;
-  font-size: 16px;
-  font-family: "Inter", sans-serif;
-  font-weight: 400;
 }
 
 .bascet-stage-two__content-registr-wrapper-forget {
