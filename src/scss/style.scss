@@ -766,13 +766,51 @@ a:hover{
   &__btns{
     display: flex;
     &-item{
-      width: 278px;  
-    }
+      width: 278px;
+      background-color: #fff;
+	font-weight: 400;
+	display: block;
+	text-align: center;
+	transition: all 0.3s ease;
+  font-family: $fontFamily;
+  color: #0021AF;
+  padding: 15px;
+  border: 1px solid #0021AF;
+  transition: all ease 0.5s;
+  &:hover{
+    background-color: #0021AF;
+    color:#fff;
+    border: 1px solid #0021AF;
+    opacity: 1;
+  }
+  &.active{
+  background-color: #0021AF;
+	font-weight: 400;
+	display: block;
+	text-align: center;
+	transition: all 0.3s ease;
+  font-family: $fontFamily;
+  color: #fff;
+  padding: 15px;
+  border: 1px solid #0021AF;
+  transition: all ease 0.5s;
+  &:hover{
+    background-color: #fff;
+    color:#0021AF;
+    border: 1px solid #0021AF;
+    opacity: 1;
+  }
+  }
+  }
   }
   &__content{
     padding-top: 60px;
     &-newuser{
+      display: none;
       padding-bottom: 150px;
+      &.active{
+        display: block;
+      }
       &-title{
         font-size: 20px;
         margin-bottom: 40px;
@@ -803,6 +841,9 @@ a:hover{
     &-registr{
       display: none;
       padding-bottom: 150px;
+      &.active{
+        display: block;
+      }
       &-title{
         font-size: 20px;
         margin-bottom: 50px;
@@ -1221,12 +1262,49 @@ $border-width: 1px;
   position: relative;
   &__personal{
     width: 278px;
+    background-color: #fff;
+	font-weight: 400;
+	display: block;
+	text-align: center;
+	transition: all 0.3s ease;
+  font-family: $fontFamily;
+  color: #0021AF;
+  padding: 15px;
+  border: 1px solid #0021AF;
+  transition: all ease 0.5s;
+  &:hover{
+    background-color: #0021AF;
+    color:#fff;
+    border: 1px solid #0021AF;
+    opacity: 1;
+  }
+  &.active{
+    background-color: #0021AF;
+	font-weight: 400;
+	display: block;
+	text-align: center;
+	transition: all 0.3s ease;
+  font-family: $fontFamily;
+  color: #fff;
+  padding: 15px;
+  border: 1px solid #0021AF;
+  transition: all ease 0.5s;
+  &:hover{
+    background-color: #fff;
+    color:#0021AF;
+    border: 1px solid #0021AF;
+    opacity: 1;
+  }
+  }
   }
 }
 
 .profile{
   display: none;
   padding: 58px 0 150px 80px;
+  &.active{
+    display: block;
+  }
   &__title{
     font-size: 20px;
     margin-bottom: 40px;
@@ -1252,6 +1330,9 @@ $border-width: 1px;
 .current-orders{
   display: none;
   padding: 58px 0 0 80px;
+  &.active{
+    display: block;
+  }
   &__title{
     font-size: 20px;
   }
@@ -1279,12 +1360,19 @@ $border-width: 1px;
   &__wrapper{
     &-itogitem{
       display: none;
+      &.active{
+        display: block;
+      }
     }
   }
 }
 
 .history{
   padding: 58px 0 150px 80px;
+  display: none;
+  &.active{
+    display: block;
+  }
   &__wrapper{
     &-item{
       &_f{
@@ -1322,3 +1410,14 @@ margin-bottom: 150px;
   text-decoration: underline;
 }
 }
+
+//media
+
+@media (max-width: 1199px){
+  .catalog{
+    &__wrapper{
+      justify-content: center;
+    }
+  }
+}
+

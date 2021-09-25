@@ -49,12 +49,12 @@
             <h2 class="bascet-stage-two__title">
                 Контактная информация
             </h2>
-            <div class="bascet-stage-two__btns">
-                <a href="#" class="bascet-stage-two__btns-item btn">Я новый покупатель</a>
-                <a href="#" class="bascet-stage-two__btns-item btn-white">Я зарегистрирован</a>
+            <div class="bascet-stage-two__btns" id="bascet-stage-two__btns">
+                <a href="#" class="bascet-stage-two__btns-item active" data-btn="1">Я новый покупатель</a>
+                <a href="#" class="bascet-stage-two__btns-item" data-btn="2">Я зарегистрирован</a>
             </div>
-            <div class="bascet-stage-two__content">
-                <div class="bascet-stage-two__content-newuser">
+            <div class="bascet-stage-two__content" id="bascet-stage-two__content">
+                <div class="bascet-stage-two__content-newuser active" data-content="1">
                     <h3 class="bascet-stage-two__content-newuser-title">
                         Персональная информация
                     </h3>
@@ -74,7 +74,7 @@
                     </div>
                     <a href="#" class="bascet-stage-two__content-newuser-next btn">Продолжить</a>
                 </div>
-                <div class="bascet-stage-two__content-registr">
+                <div class="bascet-stage-two__content-registr" data-content="2">
                     <h3 class="bascet-stage-two__content-registr-title">
                         Вход
                     </h3>
@@ -94,5 +94,6 @@
     </div>
 
     @@include('_footer.html')
+    <script src="/js/script.js"></script>
 </body>
 </html>

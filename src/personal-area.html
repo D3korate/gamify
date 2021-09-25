@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,9 +8,10 @@
     <link rel="stylesheet" href="css/style.min.css">
     <title>Контакты</title>
 </head>
+
 <body>
     @@include('_header.html')
-    
+
     <div class="container">
         <div class="nav-bar">
             <div class="nav-bar__wrapper">
@@ -17,13 +19,13 @@
                     Каталог товаров
                 </a>
                 <a href="#" class="nav-bar__wrapper-link">
-                     Контакты
+                    Контакты
                 </a>
                 <a href="#" class="nav-bar__wrapper-link">
-                     Возврат товара
+                    Возврат товара
                 </a>
                 <a href="#" class="nav-bar__wrapper-link ">
-                     Скидки
+                    Скидки
                 </a>
             </div>
             <div class="nav-bar__navigation">
@@ -39,110 +41,139 @@
                     Личный кабинет
                 </h2>
                 <div class="personal-area__wrapper">
-                <div class="tabs-wrapper">
-                    <a href="#" class="tabs-wrapper__personal btn">Профиль</a>
-                    <a href="#" class="tabs-wrapper__personal btn-white">Текущие заказы</a>
-                    <a href="#" class="tabs-wrapper__personal btn-white">История заказов</a>
-                </div>
-                <div class="profile">
-                    <h3 class="profile__title">Персональная информация</h3>
-                    <div class="bascet-stage-two__content-newuser-wrapperi">
-                        <input class="bascet-stage-two__content-newuser-item" type="text" placeholder="Имя">
-                        <input class="bascet-stage-two__content-newuser-item" type="text" placeholder="Фамилия"> 
+                    <div class="tabs-wrapper" id="tabs-wrapper">
+                        <a href="#" class="tabs-wrapper__personal active" data-btn="1">Профиль</a>
+                        <a href="#" class="tabs-wrapper__personal" data-btn="2">Текущие заказы</a>
+                        <a href="#" class="tabs-wrapper__personal" data-btn="3">История заказов</a>
                     </div>
-                    <div class="bascet-stage-two__content-newuser-wrapperi">
-                        <input class="bascet-stage-two__content-newuser-item" type="text" placeholder="Электронный адрес"> 
-                        <input class="bascet-stage-two__content-newuser-item" type="text" placeholder="Телефон">   
-                    </div>
-                    <h3 class="profile__title profile__title_change">Cменить пароль</h3>
-                    <div class="change-pass">
-                    <input class="bascet-stage-two__content-newuser-item new-password__input" type="text" placeholder="Новый пароль">
-                    <input class="bascet-stage-two__content-newuser-item new-password__input" type="text" placeholder="Повторите пароль">  
-                    </div>
-                    <div class="profile__btns">
-                        <a href="#" class="profile__btns-item btn">Сохранить</a>
-                        <a href="" class="profile__btns-item btn-white">Отмена</a>
-                    </div>
-                </div>
-                <div class="current-orders">
-                    <h3 class="current-orders__title">Заказ № 1111111111</h3>
-                    <p class="current-orders__text">
-                        В ближайшее время специалист свяжется с вами по телефону: <span class="current-orders__text-span">+7(914)-111-11-11</span>
-                    </p>
-                    <h3 class="current-orders__title">Информация о заказе <a href="#" class="bascet-stage-four__content-info-printing">Печать</a></h3>
-                    <p class="current-orders__span current-orders__span_f">Дата оформления: <span class="current-orders__span_r">04.07.2021</span></p>
-                    <p class="current-orders__span">Способ доставки: <span class="current-orders__span_r">Самовывоз из магазина</span></p>
-                    <p class="current-orders__span">Адрес доставки: <span class="current-orders__span_r">г. Якутск ул.Первая, 13</span></p>
-                    <p class="current-orders__span">Способ оплаты: <span class="current-orders__span_r">Наличными при получении</span></p>
-                </div>
-                <div class="history">
-                    <div class="history__wrapper">
-                        <div class="history__wrapper-item history__wrapper-item_f">
-                        <h3 class="current-orders__title">Заказ № 1111111111</h3>
-                        <h3 class="current-orders__title">Информация о заказе <a href="#" class="bascet-stage-four__content-info-printing">Печать</a></h3>
-                        <p class="current-orders__span current-orders__span_f">Дата оформления: <span class="current-orders__span_r">04.07.2021</span></p>
-                        <p class="current-orders__span">Способ доставки: <span class="current-orders__span_r">Самовывоз из магазина</span></p>
-                        <p class="current-orders__span">Адрес доставки: <span class="current-orders__span_r">г. Якутск ул.Первая, 13</span></p>
-                        <p class="current-orders__span">Способ оплаты: <span class="current-orders__span_r">Наличными при получении</span></p>
+                    <div class="personal-area__content-wrapper" id="personal-area__content-wrapper">
+                        <div class="profile active" data-content="1">
+                            <h3 class="profile__title">Персональная информация</h3>
+                            <div class="bascet-stage-two__content-newuser-wrapperi">
+                                <input class="bascet-stage-two__content-newuser-item" type="text" placeholder="Имя">
+                                <input class="bascet-stage-two__content-newuser-item" type="text" placeholder="Фамилия">
+                            </div>
+                            <div class="bascet-stage-two__content-newuser-wrapperi">
+                                <input class="bascet-stage-two__content-newuser-item" type="text"
+                                    placeholder="Электронный адрес">
+                                <input class="bascet-stage-two__content-newuser-item" type="text" placeholder="Телефон">
+                            </div>
+                            <h3 class="profile__title profile__title_change">Cменить пароль</h3>
+                            <div class="change-pass">
+                                <input class="bascet-stage-two__content-newuser-item new-password__input" type="text"
+                                    placeholder="Новый пароль">
+                                <input class="bascet-stage-two__content-newuser-item new-password__input" type="text"
+                                    placeholder="Повторите пароль">
+                            </div>
+                            <div class="profile__btns">
+                                <a href="#" class="profile__btns-item btn">Сохранить</a>
+                                <a href="" class="profile__btns-item btn-white">Отмена</a>
+                            </div>
                         </div>
-                        <div class="history__wrapper-item">
-                        <h3 class="current-orders__title">Заказ № 1111111111</h3>
-                        <h3 class="current-orders__title">Информация о заказе <a href="#" class="bascet-stage-four__content-info-printing">Печать</a></h3>
-                        <p class="current-orders__span current-orders__span_f">Дата оформления: <span class="current-orders__span_r">04.07.2021</span></p>
-                        <p class="current-orders__span">Способ доставки: <span class="current-orders__span_r">Самовывоз из магазина</span></p>
-                        <p class="current-orders__span">Адрес доставки: <span class="current-orders__span_r">г. Якутск ул.Первая, 13</span></p>
-                        <p class="current-orders__span">Способ оплаты: <span class="current-orders__span_r">Наличными при получении</span></p>
+                        <div class="current-orders" data-content="2">
+                            <h3 class="current-orders__title">Заказ № 1111111111</h3>
+                            <p class="current-orders__text">
+                                В ближайшее время специалист свяжется с вами по телефону: <span
+                                    class="current-orders__text-span">+7(914)-111-11-11</span>
+                            </p>
+                            <h3 class="current-orders__title">Информация о заказе <a href="#"
+                                    class="bascet-stage-four__content-info-printing">Печать</a></h3>
+                            <p class="current-orders__span current-orders__span_f">Дата оформления: <span
+                                    class="current-orders__span_r">04.07.2021</span></p>
+                            <p class="current-orders__span">Способ доставки: <span
+                                    class="current-orders__span_r">Самовывоз из магазина</span></p>
+                            <p class="current-orders__span">Адрес доставки: <span class="current-orders__span_r">г.
+                                    Якутск ул.Первая, 13</span></p>
+                            <p class="current-orders__span">Способ оплаты: <span
+                                    class="current-orders__span_r">Наличными при получении</span></p>
+                            <div class="current-orders__contetn-wrapper">
+
+                            </div>
+                        </div>
+                        <div class="history" data-content="3">
+                            <div class="history__wrapper">
+                                <div class="history__wrapper-item history__wrapper-item_f">
+                                    <h3 class="current-orders__title">Заказ № 1111111111</h3>
+                                    <h3 class="current-orders__title">Информация о заказе <a href="#"
+                                            class="bascet-stage-four__content-info-printing">Печать</a></h3>
+                                    <p class="current-orders__span current-orders__span_f">Дата оформления: <span
+                                            class="current-orders__span_r">04.07.2021</span></p>
+                                    <p class="current-orders__span">Способ доставки: <span
+                                            class="current-orders__span_r">Самовывоз из магазина</span></p>
+                                    <p class="current-orders__span">Адрес доставки: <span
+                                            class="current-orders__span_r">г. Якутск ул.Первая, 13</span></p>
+                                    <p class="current-orders__span">Способ оплаты: <span
+                                            class="current-orders__span_r">Наличными при получении</span></p>
+                                </div>
+                                <div class="history__wrapper-item">
+                                    <h3 class="current-orders__title">Заказ № 1111111111</h3>
+                                    <h3 class="current-orders__title">Информация о заказе <a href="#"
+                                            class="bascet-stage-four__content-info-printing">Печать</a></h3>
+                                    <p class="current-orders__span current-orders__span_f">Дата оформления: <span
+                                            class="current-orders__span_r">04.07.2021</span></p>
+                                    <p class="current-orders__span">Способ доставки: <span
+                                            class="current-orders__span_r">Самовывоз из магазина</span></p>
+                                    <p class="current-orders__span">Адрес доставки: <span
+                                            class="current-orders__span_r">г. Якутск ул.Первая, 13</span></p>
+                                    <p class="current-orders__span">Способ оплаты: <span
+                                            class="current-orders__span_r">Наличными при получении</span></p>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                    
                 </div>
+                <div class="personal-area__content-wrapper" id="personal-area__content-wrapperr">
+                    <div class="current-orders__wrapper-itogitem" data-content="2">
+                        <div class="list__case-content-titles bascet-stage-one__content-titles list__case-content-titles bascet-stage-one__content-titles_four">
+                            <span class="list__case-content-titles-name bascet-stage-one__content-titles-name">
+                                Наименование товара
+                            </span>
+                            <span class="list__case-content-titles-coast">
+                                Цена
+                            </span>
+                            <span class="list__case-content-titles-number">
+                                Кол-во
+                            </span>
+                            <span class="list__case-content-titles-order">
+                                Сумма
+                            </span>
+                        </div>
+                        <div class="bascet-stage-one__content-item bascet-stage-one__content-item_four">
+                            <span class="bascet-stage-one__content-item-del bascet-stage-one__content-item-del_none"></span>
+                            <p class="list__case-content-list-item-text bascet-stage-one__content-item-text">
+                                Воздухоотводчик автоматический 1/2" (NEW) VT.502.NH.04
+                            </p>
+                            <span class="list__case-content-list-item-coast">
+                                2500 р.
+                            </span>
+                            <div class="list__case-content-list-item-numbers">
+                                <span class="list__case-content-list-item-numbers-number-f list__case-content-list-item-numbers-number-f_four">-</span>
+                                <span class="list__case-content-list-item-numbers-numbert">
+                                    1
+                                </span>
+                                <span class="list__case-content-list-item-numbers-number-s list__case-content-list-item-numbers-number-s_four">
+                                    +
+                                </span>
+                            </div>
+                            <span class="list__case-content-list-item-coast bascet-stage-one__content-item-summ bascet-stage-one__content-item-summ_four">
+                                2500 р.
+                            </span>
+                        </div>
+                        <p class="bascet-stage-one__content-results">
+                            Всего позиций: <span class="bascet-stage-one__content-results-number">1</span>
+                        </p>
+                        <p class="bascet-stage-one__content-results current-orders_paddingb">
+                            Итого: <span class="bascet-stage-one__content-results-number">2500 р.</span>
+                        </p>
+                    </div>
                 </div>
             </div>
-            <div class="current-orders__wrapper-itogitem">
-            <div class="list__case-content-titles bascet-stage-one__content-titles list__case-content-titles bascet-stage-one__content-titles_four">
-                <span class="list__case-content-titles-name bascet-stage-one__content-titles-name">
-                    Наименование товара
-                </span>
-                <span class="list__case-content-titles-coast">
-                    Цена
-                </span>
-                <span class="list__case-content-titles-number">
-                    Кол-во
-                </span>
-                <span class="list__case-content-titles-order">
-                    Сумма
-                </span>
-            </div>
-            <div class="bascet-stage-one__content-item bascet-stage-one__content-item_four">
-                <span class="bascet-stage-one__content-item-del bascet-stage-one__content-item-del_none"></span>
-                <p class="list__case-content-list-item-text bascet-stage-one__content-item-text">
-                    Воздухоотводчик автоматический 1/2" (NEW) VT.502.NH.04
-                </p>
-                <span class="list__case-content-list-item-coast">
-                    2500 р.
-                </span>
-                <div class="list__case-content-list-item-numbers">
-                    <span class="list__case-content-list-item-numbers-number-f list__case-content-list-item-numbers-number-f_four">-</span>
-                    <span class="list__case-content-list-item-numbers-numbert">
-                        1
-                    </span>
-                    <span class="list__case-content-list-item-numbers-number-s list__case-content-list-item-numbers-number-s_four">
-                        +
-                    </span>
-                </div>
-                <span class="list__case-content-list-item-coast bascet-stage-one__content-item-summ bascet-stage-one__content-item-summ_four">
-                    2500 р.
-                </span>
-            </div>
-            <p class="bascet-stage-one__content-results">
-                Всего позиций: <span class="bascet-stage-one__content-results-number">1</span>
-            </p>
-            <p class="bascet-stage-one__content-results current-orders_paddingb">
-                Итого: <span class="bascet-stage-one__content-results-number">2500 р.</span>
-            </p>
-        </div>
         </div>
     </div>
 
     @@include('_footer.html')
+    <script src="/js/script.js"></script>
 </body>
+
 </html>

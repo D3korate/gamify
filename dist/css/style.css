@@ -724,6 +724,43 @@ a:hover {
 
 .bascet-stage-two__btns-item {
   width: 278px;
+  background-color: #fff;
+  font-weight: 400;
+  display: block;
+  text-align: center;
+  transition: all 0.3s ease;
+  font-family: "Inter", sans-serif;
+  color: #0021AF;
+  padding: 15px;
+  border: 1px solid #0021AF;
+  transition: all ease 0.5s;
+}
+
+.bascet-stage-two__btns-item:hover {
+  background-color: #0021AF;
+  color: #fff;
+  border: 1px solid #0021AF;
+  opacity: 1;
+}
+
+.bascet-stage-two__btns-item.active {
+  background-color: #0021AF;
+  font-weight: 400;
+  display: block;
+  text-align: center;
+  transition: all 0.3s ease;
+  font-family: "Inter", sans-serif;
+  color: #fff;
+  padding: 15px;
+  border: 1px solid #0021AF;
+  transition: all ease 0.5s;
+}
+
+.bascet-stage-two__btns-item.active:hover {
+  background-color: #fff;
+  color: #0021AF;
+  border: 1px solid #0021AF;
+  opacity: 1;
 }
 
 .bascet-stage-two__content {
@@ -731,7 +768,12 @@ a:hover {
 }
 
 .bascet-stage-two__content-newuser {
+  display: none;
   padding-bottom: 150px;
+}
+
+.bascet-stage-two__content-newuser.active {
+  display: block;
 }
 
 .bascet-stage-two__content-newuser-title {
@@ -768,6 +810,10 @@ a:hover {
 .bascet-stage-two__content-registr {
   display: none;
   padding-bottom: 150px;
+}
+
+.bascet-stage-two__content-registr.active {
+  display: block;
 }
 
 .bascet-stage-two__content-registr-title {
@@ -1246,11 +1292,52 @@ a:hover {
 
 .tabs-wrapper__personal {
   width: 278px;
+  background-color: #fff;
+  font-weight: 400;
+  display: block;
+  text-align: center;
+  transition: all 0.3s ease;
+  font-family: "Inter", sans-serif;
+  color: #0021AF;
+  padding: 15px;
+  border: 1px solid #0021AF;
+  transition: all ease 0.5s;
+}
+
+.tabs-wrapper__personal:hover {
+  background-color: #0021AF;
+  color: #fff;
+  border: 1px solid #0021AF;
+  opacity: 1;
+}
+
+.tabs-wrapper__personal.active {
+  background-color: #0021AF;
+  font-weight: 400;
+  display: block;
+  text-align: center;
+  transition: all 0.3s ease;
+  font-family: "Inter", sans-serif;
+  color: #fff;
+  padding: 15px;
+  border: 1px solid #0021AF;
+  transition: all ease 0.5s;
+}
+
+.tabs-wrapper__personal.active:hover {
+  background-color: #fff;
+  color: #0021AF;
+  border: 1px solid #0021AF;
+  opacity: 1;
 }
 
 .profile {
   display: none;
   padding: 58px 0 150px 80px;
+}
+
+.profile.active {
+  display: block;
 }
 
 .profile__title {
@@ -1280,6 +1367,10 @@ a:hover {
 .current-orders {
   display: none;
   padding: 58px 0 0 80px;
+}
+
+.current-orders.active {
+  display: block;
 }
 
 .current-orders__title {
@@ -1317,8 +1408,17 @@ a:hover {
   display: none;
 }
 
+.current-orders__wrapper-itogitem.active {
+  display: block;
+}
+
 .history {
   padding: 58px 0 150px 80px;
+  display: none;
+}
+
+.history.active {
+  display: block;
 }
 
 .history__wrapper-item_f {
@@ -1352,6 +1452,12 @@ a:hover {
   color: #0021AF;
   font-size: 10px;
   text-decoration: underline;
+}
+
+@media (max-width: 1199px) {
+  .catalog__wrapper {
+    justify-content: center;
+  }
 }
 
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
