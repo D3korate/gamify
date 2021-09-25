@@ -564,7 +564,7 @@ a:hover{
         
         &-order{
           display: block;
-          background: url("/img/case-bascet.svg");
+          background: url("/img/case-bascet.svg") center center no-repeat;
           width: 38px;
           height: 34.77px;
         }
@@ -1115,6 +1115,7 @@ $border-width: 1px;
   }
   &__text-list{
     display: block;
+    padding-left: 15px;
     &-item {
       display: list-item;
       color: #111;
@@ -1190,6 +1191,10 @@ $border-width: 1px;
   }
   &__map{
     padding-bottom: 150px;
+    &-frame{
+      width: 1200px;
+      height: 338px;
+    }
   }
 }
 
@@ -1289,12 +1294,6 @@ $border-width: 1px;
   padding: 15px;
   border: 1px solid #0021AF;
   transition: all ease 0.5s;
-  &:hover{
-    background-color: #fff;
-    color:#0021AF;
-    border: 1px solid #0021AF;
-    opacity: 1;
-  }
   }
   }
 }
@@ -1388,7 +1387,7 @@ $border-width: 1px;
 .notfound{
 background: url("/img/404.svg") center right no-repeat;
 background-position: 548px;
-width: 1200px;
+width: 100%;
 height: 500px;
 padding-left: 155px;
 margin-bottom: 150px;
@@ -1413,10 +1412,217 @@ margin-bottom: 150px;
 
 //media
 
-@media (max-width: 1199px){
+@media (max-width: 1200px){
+  .container{
+    padding: 0 15px;
+  }
+
+  .offer{
+    background-size: 70%;
+  }
   .catalog{
+    &__case{
+      &-wrapper{
+       flex-wrap: wrap;
+       justify-content: center;
+       &-item{
+         &:last-child{
+           margin-right: 11px;
+           margin-top: 10px;
+         }
+       }
+      }
+    }
     &__wrapper{
       justify-content: center;
+      &-item {
+        margin-right: 10px;
+        &:nth-child(4n+4){
+          margin-right: 10px;
+        }
+        &:nth-child(1n+4){
+          margin-bottom:10px;
+        }
+      }
+    }
+  }
+
+  .list__case{
+    &-content{
+      &-titles{
+        &-name{
+          margin-right: 393px;
+        }
+        &-coast{
+          margin-right: 50px;
+        }
+        &-number{
+          margin-right: 30px;
+        }
+      }
+      &-list{
+        &-item{
+          &-text{
+            margin-right: 115px;
+          }
+        }
+      }
+    }
+  }
+  .crumbs__basket{
+    &-separate{
+      width: 7%;
+    }
+  }
+  .bascet-stage-one{
+    &__content{
+      &-titles{
+        &-name{
+          margin-right: 0;
+          width: 64%;
+        }
+      }
+      &-item{
+        &-text{
+          width: 57%;
+          margin-right: 0;
+        }
+        &-numbers{
+          margin: 0;
+        }
+        &-del{
+          margin-right: 0;
+        }
+      }
+    }
+  }
+  .bascet-stage-four{
+    &__content{
+      &-item{
+        &-text{
+          width: 65%;
+        }
+      }
+    }
+  }
+
+  .contacts{
+    &__wrapper{
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    &__map{
+      &-frame{
+        width: 100%;
+      }
+    }
+  }
+
+  .personal-area{
+    &__wrapper{
+      flex-wrap: wrap;
+    }
+  }
+}
+
+.notfound{
+  background-size: 45%;
+}
+
+
+
+@media (max-width: 991px){
+  .header{
+    &__wrapper{
+      &-adress{
+        display: none;
+      }
+    }
+  }
+  .nav-bar{
+    width: 100%;
+    &__navigation{
+      flex-direction: column;
+      align-items: center;
+      &-link{
+        margin-top: 3px;
+        margin-right: 0;
+      }
+    }
+  }
+  .offer{
+    background-size: 63%;
+    background-position: top right;
+    height: 220.66px;;
+    &-title{
+      padding: 20px 0 0 24px;
+      font-size: 40px;
+    }
+  }
+
+  .footer{
+    &__wrapper{
+      flex-wrap: wrap;
+    }
+  }
+
+  .catalog{
+    &__case{
+      &-wrapper{
+        &-item{
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+  .list__case{
+    &-content{
+      &-titles{
+        &-name{
+          margin-right: 0;
+          width: 64%;
+        }
+      }
+      &-list{
+        &-item{
+          padding: 12px 15px 13.23px 25px;
+          &-text{
+            width: 61%;
+            margin-right: 0;
+          }
+          &-order{
+            width: 58px;
+          }
+          &-numbers{
+            margin-right: 0;
+            margin-left: 0px;
+          }
+        }
+      }
+    }
+  }
+  .notfound{
+    background-position: center bottom;
+    margin-bottom: 70px;
+    &__title{
+      padding-top: 0;
+    }
+  }
+  
+}
+
+
+@media (max-width: 806px){
+  .personal-area{
+    &__input{
+      margin-bottom: 30px;
+    }
+  }
+}
+@media(max-width:781px){
+  .current-orders{
+    &__text{
+      width: 80%;
     }
   }
 }
