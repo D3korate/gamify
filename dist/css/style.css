@@ -135,6 +135,61 @@ a:hover {
   background-color: #fff;
 }
 
+#menu__toggle {
+  opacity: 0;
+}
+
+.menu__btn {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #111;
+}
+
+.menu__btn > span::before {
+  content: "";
+  top: -8px;
+}
+
+.menu__btn > span::after {
+  content: "";
+  top: 8px;
+}
+
+#menu__toggle:checked ~ .menu__btn > span {
+  transform: rotate(45deg);
+}
+
+#menu__toggle:checked ~ .menu__btn > span::before {
+  top: 0;
+  transform: rotate(0);
+}
+
+#menu__toggle:checked ~ .menu__btn > span::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+
+#menu__toggle:checked ~ .header-mobile__wrapper {
+  display: block;
+  left: 0;
+}
+
 .header__wrapper {
   display: flex;
   justify-content: space-between;
@@ -173,6 +228,28 @@ a:hover {
 
 .header__wrapper-phone-tel-wa_g {
   color: #4CAF50;
+}
+
+.header__wrapper-bascet {
+  background: url("/img/bascet-mobile.png") center center no-repeat;
+  width: 20px;
+  height: 18.3px;
+  display: none;
+}
+
+.header__input-wrapper {
+  display: none;
+}
+
+.header__input-wrapper-link {
+  background: url("/img/mobile-search.png") center center no-repeat;
+  width: 16px;
+  height: 16px;
+  display: block;
+  position: absolute;
+  position: absolute;
+  right: 28px;
+  top: 71px;
 }
 
 .footer {
@@ -251,6 +328,10 @@ a:hover {
 
 .footer__logo-wrapper-text-item-link {
   color: rgba(17, 17, 17, 0.5);
+}
+
+.footer__logo-wrapper-text-item_mobile-db {
+  display: none;
 }
 
 .nav-bar {
@@ -1453,6 +1534,56 @@ a:hover {
   text-decoration: underline;
 }
 
+.header-mobile {
+  display: none;
+  z-index: 999;
+}
+
+.header-mobile__wrapper {
+  display: none;
+}
+
+.header-mobile__wrapper-main {
+  width: 320px;
+  height: 453px;
+  background-color: #fff;
+}
+
+.header-mobile__wrapper-main-nav-bar {
+  flex-direction: column;
+  display: flex;
+  margin: 0 auto;
+}
+
+.header-mobile__wrapper-main-nav-bar-navigation {
+  width: 174px;
+  margin: 60px auto;
+  justify-content: space-between;
+}
+
+.header-mobile__wrapper-main-nav-bar-link {
+  padding: 15px 0;
+  text-align: center;
+}
+
+.header-mobile__wrapper-logo {
+  width: 104px;
+  height: 19px;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  margin-bottom: 35px;
+}
+
+.header-mobile__wrapper-phone {
+  background: url("/img/mobile-wa.png") center center no-repeat;
+  width: 25px;
+  height: 25px;
+  display: none;
+  margin: 0 auto;
+}
+
 .notfound {
   background-size: 45%;
 }
@@ -1570,7 +1701,7 @@ a:hover {
   .offer {
     background-size: 63%;
     background-position: top right;
-    height: 220.66px;
+    height: 277.66px;
   }
 
   .offer-title {
@@ -1631,6 +1762,183 @@ a:hover {
   }
 }
 
+@media (max-width: 767px) {
+  .header__wrapper {
+    padding-top: 16px;
+    padding-bottom: 20px;
+    border-bottom: none;
+  }
+
+  .header__wrapper-phone {
+    display: none;
+  }
+
+  .header__wrapper-bascet {
+    display: block;
+  }
+
+  .header__wrapper-logo {
+    width: 104px;
+    height: 19px;
+    background-size: cover;
+  }
+
+  .header__input-wrapper {
+    display: block;
+  }
+
+  .header__input-wrapper-search {
+    width: 100%;
+    height: 30px;
+    border-color: rgba(17, 17, 17, 0.5);
+  }
+
+  .nav-bar {
+    display: none;
+  }
+
+  .hamburger-menu {
+    display: block;
+    width: 26px;
+    height: 26px;
+  }
+
+  .header-mobile__wrapper-main {
+    margin-top: -25px;
+    margin-left: -7px;
+  }
+
+  .header-mobile__wrapper-main-nav-bar-navigation {
+    flex-direction: row;
+  }
+
+  .header-mobile__wrapper-phone {
+    display: block;
+  }
+
+  .offer {
+    background-position: center bottom;
+    height: 455px;
+    background-size: 100%;
+  }
+
+  .offer-title {
+    font-size: 35px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .offer-texts {
+    background: none;
+    margin: 0 auto;
+  }
+
+  .offer-texts-item {
+    color: #d50000;
+  }
+
+  .offer-texts-item_s {
+    margin-left: 10px;
+  }
+
+  .footer__wrapper {
+    flex-direction: column;
+  }
+
+  .footer__wrapper-workh-list {
+    display: none;
+  }
+
+  .footer__wrapper-questions-list {
+    display: none;
+  }
+
+  .footer__wrapper-menu-list-item_mobile {
+    display: none;
+  }
+
+  .footer__logo-wrapper {
+    margin: 0 auto;
+  }
+
+  .footer__logo-wrapper-text-item_mobile {
+    display: none;
+  }
+
+  .footer__logo-wrapper-text-item_mobile-db {
+    display: block;
+    margin-top: 15px;
+  }
+
+  .footer__wrapper-menu {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .footer__wrapper-menu-wa {
+    margin-top: 30px;
+    margin-bottom: 15px;
+  }
+
+  .footer__wrapper-logo_mobile {
+    width: 138px;
+    height: 23px;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 575px) {
+  .offer {
+    background-size: 100%;
+    height: 362px;
+  }
+
+  .offer-title {
+    font-size: 20px;
+  }
+
+  .offer-texts {
+    display: block;
+    text-align: center;
+  }
+
+  .offer-texts-item {
+    font-size: 15px;
+  }
+
+  .catalog {
+    padding-top: 80px;
+  }
+}
+
+@media (max-width: 475px) {
+  .offer {
+    height: 315px;
+  }
+}
+
+@media (max-width: 380px) {
+  .offer {
+    height: 267px;
+  }
+
+  .catalog__wrapper {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 330px) {
+  .header-mobile__wrapper-main {
+    margin-top: -25px;
+    margin-left: -7px;
+    width: 310px;
+  }
+}
+
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
   [include*="form-input-select()"] select::-ms-expand {
     display: none;
@@ -1642,8 +1950,14 @@ a:hover {
   }
 }
 
+.webp .header__wrapper-bascet { background: url(/img/bascet-mobile.webp) center center no-repeat; }
+
+.webp .header__input-wrapper-link { background: url(/img/mobile-search.webp) center center no-repeat; }
+
 .webp .offer-texts { background: url(/img/towel.webp) no-repeat; }
 
 .webp .crumbs__catalog-case-next { background: url(/img/next-crumbs.webp) center center no-repeat; }
 
 .webp .bascet-stage-one__content-item-del { background: url(/img/basket-delete.webp); }
+
+.webp .header-mobile__wrapper-phone { background: url(/img/mobile-wa.webp) center center no-repeat; }

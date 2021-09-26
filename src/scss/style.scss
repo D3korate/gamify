@@ -227,6 +227,55 @@ a:hover{
   background-color:#fff;
 }
 
+#menu__toggle {
+  opacity: 0;
+}
+
+.menu__btn {
+  display: flex; 
+  align-items: center; 
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  z-index: 1;
+}
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #111;
+}
+.menu__btn > span::before {
+  content: '';
+  top: -8px;
+}
+.menu__btn > span::after {
+  content: '';
+  top: 8px;
+}
+
+#menu__toggle:checked ~ .menu__btn > span {
+  transform: rotate(45deg);
+}
+#menu__toggle:checked ~ .menu__btn > span::before {
+  top: 0;
+  transform: rotate(0);
+}
+#menu__toggle:checked ~ .menu__btn > span::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+#menu__toggle:checked ~ .header-mobile__wrapper{
+  display: block;
+  left: 0;
+}
+
 
 //Header
 
@@ -264,6 +313,28 @@ a:hover{
         }
       }
     }
+    &-bascet{
+      background: url("/img/bascet-mobile.png") center center no-repeat;
+      width: 20px;
+      height: 18.3px;
+      display: none;
+    }
+  }
+  &__input{
+    &-wrapper{
+      display: none;
+      &-link{
+        background: url("/img/mobile-search.png") center center no-repeat;
+        width: 16px;
+        height: 16px;
+        display: block;
+        position: absolute;
+        position: absolute;
+        right: 28px;
+        top: 71px;
+      }
+    }
+    
   }
 }
 
@@ -289,6 +360,7 @@ a:hover{
           }
         }
       }
+      
     }
     &-workh{
       &-list{
@@ -333,6 +405,11 @@ a:hover{
           }
           &-link{
             color: rgba($color: #111111, $alpha: 0.5);
+          }
+          &_mobile{
+            &-db{
+              display: none;
+            }
           }
         }
       }
@@ -1410,6 +1487,49 @@ margin-bottom: 150px;
 }
 }
 
+.header-mobile{
+  display: none;
+  z-index: 999;
+  &__wrapper{
+    display: none;
+    &-main{
+      width: 320px;
+      height: 453px;
+      background-color: #fff;
+      &-nav-bar{
+        flex-direction: column;
+        display: flex;
+        margin: 0 auto;
+        &-navigation{
+          width: 174px;
+          margin: 60px auto;
+          justify-content: space-between;
+        }
+        &-link{
+          padding: 15px 0;
+          text-align: center;
+        }
+      }
+    }
+    &-logo{
+      width: 104px;
+      height: 19px;
+      background-size: contain;
+      background-position: center center;
+      background-repeat: no-repeat;
+      margin: 0 auto;
+      margin-bottom: 35px;
+    }
+    &-phone{
+      background: url("/img/mobile-wa.png") center center no-repeat;
+      width: 25px;
+      height: 25px;
+      display: none;
+      margin: 0 auto;
+    }
+  }
+}
+
 //media
 
 @media (max-width: 1200px){
@@ -1553,7 +1673,7 @@ margin-bottom: 150px;
   .offer{
     background-size: 63%;
     background-position: top right;
-    height: 220.66px;;
+    height: 277.66px;
     &-title{
       padding: 20px 0 0 24px;
       font-size: 40px;
@@ -1623,6 +1743,210 @@ margin-bottom: 150px;
   .current-orders{
     &__text{
       width: 80%;
+    }
+  }
+}
+
+@media(max-width: 767px){
+  .header{
+    &__wrapper{
+      padding-top: 16px;
+      padding-bottom: 20px;
+      border-bottom: none;
+      &-phone{
+        display: none;
+      }
+      &-bascet{
+        display: block;
+      }
+      &-logo{
+        width: 104px;
+        height: 19px;
+        background-size: cover;
+      }
+    }
+    &__input{
+      &-wrapper{
+        display: block;
+        &-search{
+          width: 100%;
+          height: 30px;
+          border-color: rgba($color: #111, $alpha: 0.5);
+        }
+      }
+    }
+  }
+
+  .nav-bar{
+    display: none;
+  }
+
+  .hamburger-menu{
+    display: block;
+    width: 26px;
+    height: 26px;
+  }
+
+  .header-mobile{
+    &__wrapper{
+      &-main{
+        margin-top: -25px;
+        margin-left: -7px;
+        &-nav-bar{
+          &-navigation{
+            flex-direction: row;
+          }
+        }
+      }
+      &-phone{
+        display: block;
+      }
+    }
+  }
+
+  .offer{
+    background-position: center bottom;
+    height: 455px;
+    background-size: 100%;
+    &-title{
+      font-size: 35px;
+      width: 100%;
+      text-align: center;
+    }
+    &-texts{
+      background: none;
+      margin: 0 auto;
+      &-item{
+        color: #d50000;
+        &_s{
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+
+  .footer{
+    &__wrapper{
+      flex-direction: column;
+      &-workh{
+        &-list{
+          display: none;
+        }
+      }
+      &-questions{
+        &-list{
+          display: none;
+        }
+      }
+      &-menu{
+        &-list{
+          &-item{
+            &_mobile{
+              display: none;
+            }
+          }
+        }
+      }
+    }
+    &__logo{
+      &-wrapper{
+        margin: 0 auto;
+        &-text{
+          &-item{
+            &_mobile{
+              display: none;
+              &-db{
+                display: block;
+                margin-top: 15px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .footer{
+    &__wrapper{
+      &-menu{
+        margin: 0 auto;
+        text-align: center;
+        &-wa{
+          margin-top: 30px;
+          margin-bottom: 15px;
+        }
+      }
+      &-logo{
+        &_mobile{
+          width: 138px;
+          height: 23px;
+          background-size: contain;
+          background-position: center center;
+          background-repeat: no-repeat;
+          display: block;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+}
+
+@media(max-width: 575px){
+
+  .offer{
+    background-size: 100%;
+    height: 362px;
+    &-title{
+      font-size: 20px;
+    }
+    &-texts{
+      display: block;
+      text-align: center;
+      &-item{
+        font-size: 15px;
+      }
+    }
+  }
+  .catalog{
+    padding-top: 80px;
+  }
+
+}
+
+@media(max-width: 475px){
+
+  .offer{
+    height: 315px;
+  }
+
+}
+
+@media(max-width: 380px){
+
+  .offer{
+    height: 267px;
+  }
+
+  .catalog{
+    &__wrapper{
+      flex-direction: column;
+      &-item{
+        
+      }
+    }
+  }
+
+}
+
+@media(max-width: 330px){
+  .header{
+    &-mobile{
+      &__wrapper{
+        &-main{
+          margin-top: -25px;
+          margin-left: -7px;
+          width: 310px;
+        }
+      }
     }
   }
 }
